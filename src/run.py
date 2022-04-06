@@ -320,6 +320,7 @@ def main():
         if args.do_train:
             run(args)
         else:
+		    # assuming do_test is implemented in do_eval. then the function needs to there OR to be implemented in the script do_eval
             from do_eval import do_eval
             do_eval(args)
     else:

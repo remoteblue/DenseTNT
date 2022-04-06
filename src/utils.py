@@ -40,6 +40,7 @@ def add_argument(parser):
                         action='store_true',
                         help="Whether to run eval on the dev set.")
     parser.add_argument("--do_test",
+						# --do_test is FALSE by default https://docs.python.org/3/library/argparse.html#action
                         action='store_true')
     parser.add_argument("--data_dir",
                         default='train/data/',

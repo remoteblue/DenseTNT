@@ -18,6 +18,31 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message
 logger = logging.getLogger(__name__)
 tqdm = partial(tqdm, dynamic_ncols=True)
 
+"""
+comment on do_eval.py structure
+do_eval.py
+--- eval_instance_argoverse 
+    --
+    --	
+
+--- do_eval
+	-- 
+
+
+"""
+
+"""
+
+dataset_argoverse.py
+-- get_sub_map
+	--dis_2: L2 distance between points
+	__get_dis
+	--get_dis_for_points
+	--argoverse_get_instance #Extract polylines from one example file content.
+	--
+
+
+"""
 
 def eval_instance_argoverse(batch_size, args, pred, mapping, file2pred, file2labels, DEs, iter_bar):
     for i in range(batch_size):
