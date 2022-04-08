@@ -39,6 +39,9 @@ VECTOR_PRE_Y = 1
 VECTOR_X = 2
 VECTOR_Y = 3
 
+"""
+This code have methods/claesses dedicated to Argoverse. Therefore others for Waymo and NuScience.
+"""
 
 def get_sub_map(args: utils.Args, x, y, city_name, vectors=[], polyline_spans=[], mapping=None):
     """
@@ -533,6 +536,7 @@ class Dataset(torch.utils.data.Dataset):
 
 
 def post_eval(args, file2pred, file2labels, DEs):
+    # argoverse.evaluation may come from Argoverse API
     from argoverse.evaluation import eval_forecasting
 
     score_file = args.model_recover_path.split('/')[-1]
